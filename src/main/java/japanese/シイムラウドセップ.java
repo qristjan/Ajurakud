@@ -1,8 +1,6 @@
 package japanese;
 
-import ajurakud.Ajurakud;
-
-public class シイムラウドセップ implements Ajurakud {
+public class シイムラウドセップ {
 
 	private String なまえ;
 	private int ニミ;
@@ -45,8 +43,4 @@ public class シイムラウドセップ implements Ajurakud {
 		this.職業 = 職業;
 	}
 
-	public void mõtle()
-	{
-		System.out.println(なまえ + " mõtles");
-	}
 }
