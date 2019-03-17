@@ -6,10 +6,10 @@ import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-class Koer {
+public class KoerTest {
 
     @Test
-    void testKoerHaugatus() {
+    public void testKoerHaugatus() {
         Koer koer = new Koer();
         Assert.assertEquals("Auh!", koer.getHaugatus());
     }

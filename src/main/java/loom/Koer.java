@@ -1,11 +1,9 @@
-package animal;
-
-import jdk.internal.jline.internal.Log;
+package loom;
 
 public class Koer extends Loom {
 
-    private void haugata() {
-        Log.debug("Auh!");
+    public String getHaugatus() {
+        return "Auh!";
     }
 
 }
