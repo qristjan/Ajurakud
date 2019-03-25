@@ -11,7 +11,8 @@ public class MemeViewer extends JFrame {
 
     public MemeViewer(String url) throws IOException {
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        // enable this to close all windows when closing one
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("MEME");
 
         java.net.URL meme_url = new URL(url);
@@ -25,8 +26,15 @@ public class MemeViewer extends JFrame {
     }
 
     public static void main(String[] args) throws IOException {
-        String url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Felis_silvestris_silvestris_small_gradual_decrease_of_quality.png/240px-Felis_silvestris_silvestris_small_gradual_decrease_of_quality.png";
-        new MemeViewer(url).setVisible(true);
+
+        java.util.List<String> urls = MemeService.getMemes().getUrls();
+
+        if (urls != null) {
+            int loopCounter = urls.size() > 20 ? 20 : urls.size();
+            for (int i = 0; i < loopCounter; i++) {
+                new MemeViewer(urls.get(i)).setVisible(true);
+            }
+        }
     }
 
 
