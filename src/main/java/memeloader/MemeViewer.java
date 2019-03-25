@@ -11,8 +11,7 @@ public class MemeViewer extends JFrame {
 
     public MemeViewer(String url) throws IOException {
 
-        // enable this to close all windows when closing one
-        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("MEME");
 
         java.net.URL meme_url = new URL(url);
