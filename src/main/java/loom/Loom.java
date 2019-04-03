@@ -5,6 +5,10 @@ public class Loom {
     private String nimi;
     private Double elupunktid;
 
+    protected void smash(Integer bros) {
+        System.out.println("SMASH");
+    }
+
     public String getNimi() {
         return nimi;
     }
