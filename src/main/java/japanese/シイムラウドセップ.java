@@ -1,6 +1,8 @@
 package japanese;
 
-public class シイムラウドセップ {
+import loom.Koer;
+
+public class シイムラウドセップ extends Koer {
 
 	private String なまえ;
 	private int ニミ;

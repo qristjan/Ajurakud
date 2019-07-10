@@ -29,6 +29,7 @@ public class Koer extends Loom implements Ajurakud {
                 System.out.println("hmmmmmmmmmm");
             }
         });
+        thinking.start();
         System.out.println("dunt interrupt, im thinking");
         thinking.join();
     }
