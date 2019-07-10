@@ -1,5 +1,5 @@
 package ajurakud;
 
 public interface Ajurakud {
-	public void mõtle();
+	public void mõtle() throws InterruptedException;
 }
