@@ -35,10 +35,4 @@ public class BooleanServiceTest {
 		boolean bool  = BooleanService.BooleanFromString("FALSE");
 		Assert.assertEquals(BooleanService.FALSE(), bool);
 	}
-
-
-
-
-
-
 }
