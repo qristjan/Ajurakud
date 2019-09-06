@@ -3,6 +3,7 @@ package BooleanService;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BooleanService {
 	private static List<Boolean> _booleans = new ArrayList<>(Arrays.asList(TRUE(), FALSE()));
@@ -49,4 +50,10 @@ public class BooleanService {
 		return OppositeBoolean(OppositeBoolean(b));
 	}
 
+	public static List<Boolean> GetReverseBooleanList(){
+		return _booleans
+				.stream()
+				.map(aBoolean -> OppositeBoolean(aBoolean))
+				.collect(Collectors.toList());
+	}
 }

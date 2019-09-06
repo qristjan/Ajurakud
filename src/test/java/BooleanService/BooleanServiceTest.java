@@ -3,6 +3,8 @@ package BooleanService;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
+
 public class BooleanServiceTest {
 
 	@Test
@@ -34,5 +36,13 @@ public class BooleanServiceTest {
 	public void testBooleanFromString_ReturnFalseFromFalse(){
 		boolean bool  = BooleanService.BooleanFromString("FALSE");
 		Assert.assertEquals(BooleanService.FALSE(), bool);
+	}
+
+	@Test
+	public void testGetReverseBooleanList_IsReverseFromOriginal(){
+		List<Boolean> bools = BooleanService.GetReverseBooleanList();
+
+		Assert.assertEquals(bools.get(0), BooleanService.FALSE());
+		Assert.assertEquals(bools.get(1), BooleanService.TRUE());
 	}
 }
