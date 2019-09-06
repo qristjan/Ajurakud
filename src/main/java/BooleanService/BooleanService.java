@@ -31,11 +31,17 @@ public class BooleanService {
 		return !b;
 	}
 
-	public static boolean BooleanFromInt(int integer)
+	public static boolean BooleanFromInt(int intBool)
 	{
-		return integer == 1 ?
+		return intBool == 1 ?
 		       _booleans.stream().filter(aBoolean -> aBoolean == TRUE()).findFirst().get() :
 		       _booleans.stream().filter(aBoolean -> aBoolean == FALSE()).findFirst().get();
+	}
+
+	public static boolean BooleanFromString(String stringBool){
+		return stringBool.toLowerCase().startsWith("t") ? TRUE() :
+		       stringBool.toLowerCase().startsWith("f") ? FALSE() :
+		                                                  FALSE();
 	}
 
 	public static boolean DoubleNegativeBoolean(Boolean b)

@@ -23,4 +23,16 @@ public class BooleanServiceTest {
 		boolean oneBoolean = BooleanService.BooleanFromInt(1);
 		Assert.assertEquals(BooleanService.TRUE(), oneBoolean);
 	}
+
+	@Test
+	public void testBooleanFromString_ReturnsTrueFromTrue(){
+		boolean bool  = BooleanService.BooleanFromString("TRUE");
+		Assert.assertEquals(BooleanService.TRUE(), bool);
+	}
+
+	@Test
+	public void testBooleanFromString_ReturnFalseFromFalse(){
+		boolean bool  = BooleanService.BooleanFromString("FALSE");
+		Assert.assertEquals(BooleanService.FALSE(), bool);
+	}
 }
