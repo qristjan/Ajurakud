@@ -23,10 +23,4 @@ public class BooleanServiceTest {
 		boolean oneBoolean = BooleanService.BooleanFromInt(1);
 		Assert.assertEquals(BooleanService.TRUE(), oneBoolean);
 	}
-
-
-
-
-
-
 }
