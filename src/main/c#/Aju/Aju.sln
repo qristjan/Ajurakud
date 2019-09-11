@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjuApi", "AjuApi\AjuApi.csproj", "{49133409-F34B-4533-A6EC-03E6A632AC07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjuServiis", "AjuServiis\AjuServiis.csproj", "{C5990F34-A14E-4B0A-862C-834E6C10650C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49133409-F34B-4533-A6EC-03E6A632AC07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49133409-F34B-4533-A6EC-03E6A632AC07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49133409-F34B-4533-A6EC-03E6A632AC07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49133409-F34B-4533-A6EC-03E6A632AC07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5990F34-A14E-4B0A-862C-834E6C10650C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5990F34-A14E-4B0A-862C-834E6C10650C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5990F34-A14E-4B0A-862C-834E6C10650C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5990F34-A14E-4B0A-862C-834E6C10650C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
