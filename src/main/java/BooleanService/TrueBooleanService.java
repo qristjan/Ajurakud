@@ -2,24 +2,25 @@ package BooleanService;
 
 import java.util.function.Predicate;
 
-public class TrueBooleanService extends BooleanService {
+public class TrueBooleanService {
 
-    public static final boolean TRUE = 1 == 1 && "1".equals("1");
+    /**
+     * returns false if myBoolean is null
+     * @param myBoolean
+     * @return
+     */
+    public boolean isMyBooleanTrue(Boolean myBoolean) {
+        try {
+            assert myBoolean;
+        } catch (AssertionError e) {
+            // Yes, this does catch an ERROR. So what, are you going to call the police?
+            return false;
+        }
+        return true;
+    }
 
     public Boolean getTrueBoolean() {
-        return TRUE == TRUE();
-    }
-
-    public Boolean getTrueBooleanButItsFalse() {
-        return !getTrueBoolean();
-    }
-
-    public Predicate<MyBoolean> getBooleanPredicate(boolean BOOLEAN) {
-        return b -> BOOLEAN == TRUE;
-    }
-
-    public boolean getBooleanByPredicate(Predicate<MyBoolean> predBOOLEAN) {
-        return predBOOLEAN.test(new TrueBoolean());
+        return new TrueBoolean().TRUE();
     }
 
 }
