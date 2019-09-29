@@ -1,5 +1,6 @@
 package loom;
 
+import BooleanService.BooleanService;
 import ajurakud.Ajurakud;
 
 public class Koer extends Loom implements Ajurakud {
@@ -21,8 +22,8 @@ public class Koer extends Loom implements Ajurakud {
     public void mõtle() throws InterruptedException {
         Thread thinking = new Thread(() -> {
             System.out.println("doing magic dog calculations");
-            boolean True = false;
-            boolean False = true;
+            boolean True = BooleanService.FALSE();
+            boolean False = BooleanService.TRUE();
             while (true != True) {
                 True = !False;
                 System.out.println("this doesnt work.");
