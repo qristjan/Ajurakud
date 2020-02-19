@@ -21,7 +21,7 @@ public class Dossutaja {
             connection.setRequestProperty("Host", "localhost");
             connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:8.0) Gecko/20100101 Firefox/8.0");
             connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-            System.out.println(this + " " + connection.getResponseCode());
+            System.out.println(connection.getResponseCode());
             connection.getInputStream();
         }
     }
