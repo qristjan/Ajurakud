@@ -2,15 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {NumberList} from "./NumberList";
+import {MorphedBox} from "./MorphedBox";
 
 function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo"/>
-                <p>o
-                    <NumberList things={[1, 2, 3]}/>
-                </p>
+                <h1>Hello world</h1>
+                <NumberList things={[1, 2, 3]}/>
+                <MorphedBox/>
             </header>
         </div>
     );
