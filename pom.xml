@@ -20,6 +20,19 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.5</version>
+                <configuration>
+                    <mainClass>Graafiline_ruudustik</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -107,10 +120,6 @@
             <artifactId>javafx-base</artifactId>
             <version>16-ea+7</version>
         </dependency>
-
-
-
-
     </dependencies>
 
 </project>
