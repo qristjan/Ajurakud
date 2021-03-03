@@ -1,5 +1,5 @@
-import japanese.シイムラウドセップ;
-import translaateerija.Russianizer;
+import ajurakudroot.japanese.シイムラウドセップ;
+import ajurakudroot.translaateerija.Russianizer;
 
 public class Main {
 	public static void main(String[] args) throws InterruptedException {
