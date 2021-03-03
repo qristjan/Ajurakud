@@ -1,4 +1,4 @@
-package javaython;
+package ajurakudroot.javaython;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;

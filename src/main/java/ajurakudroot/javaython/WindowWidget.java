@@ -1,4 +1,4 @@
-package javaython;
+package ajurakudroot.javaython;
 
 import javax.swing.*;
 import javax.swing.border.Border;

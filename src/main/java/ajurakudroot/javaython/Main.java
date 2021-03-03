@@ -1,6 +1,5 @@
-package javaython;
+package ajurakudroot.javaython;
 
-import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class Main {
