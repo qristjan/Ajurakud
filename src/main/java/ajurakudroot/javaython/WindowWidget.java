@@ -25,7 +25,7 @@ public class WindowWidget extends JPanel {
 
         add(new JLabel("Write code here: "), gbc);
         gbc.gridy++;
-        JTextArea code = new JTextArea();
+        var code = new JTextArea();
         Font f = new Font("consolas", Font.PLAIN, 18);
         code.setFont(f);
         Border border = BorderFactory.createLineBorder(Color.BLACK);
