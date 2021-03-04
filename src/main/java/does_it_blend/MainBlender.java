@@ -14,7 +14,7 @@ public class MainBlender {
         var blenders = Stream.of(internetBlenders, homeBlenders).flatMap(Collection::stream).collect(Collectors.toList());
         blenders.parallelStream().forEach(Runnable::run);*/
 
-        ExecutorService executor = Executors.newFixedThreadPool(10_000_000);
+        ExecutorService executor = Executors.newFixedThreadPool(10_00);
         var homeBlenders = List.of(HomeBlender.generateName().split("")).stream().map(s -> Executors.callable(new HomeBlender(s))).collect(Collectors.toList());
 
         try {

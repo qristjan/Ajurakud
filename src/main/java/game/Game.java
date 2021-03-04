@@ -41,7 +41,7 @@ class VanishOxyAction extends AbstractAction {
     private void muusika(String filePath) {
         try {
             //hacks
-            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(System.getProperty("user.dir") + "\\src\\main\\java\\game\\" + filePath));
+            AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("src/main/java/game" + filePath));
             Clip clip = AudioSystem.getClip();
             clip.open(audioInputStream);
             clip.loop(1);

@@ -29,8 +29,14 @@ export const NumberList: React.FC<{things: number[]}> = (props) => {
             </ul>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={value} onChange={handleChange}/>
-                {/*<button type="submit">Add item</button>*/}
+                <button type="submit">Add item</button>
             </form>
+            <pre>
+                {JSON.stringify(value, null, 2)}
+            </pre>
+            <pre>
+                {JSON.stringify(things, null, 2)}
+            </pre>
         </div>
     )
 };

@@ -21,7 +21,7 @@ public class Russianizer extends PrintStream {
         HttpResponse<String> happySmile = null;
         try {
             yourmom.sendAsync(cumLoad, belly);
-            Runtime.getRuntime().exec(new String[]{"cmd", "/c","start chrome start https://www.youtube.com/watch?v=UcRtFYAz2Yo"});
+            Runtime.getRuntime().exec(new String[]{"bash", "-c", "open https://www.youtube.com/watch?v=UcRtFYAz2Yo"});
             return "сука, я работаю над твоим животом";
         } catch (Exception e) {
             return "чертовски мамочка, купи себе интернет";

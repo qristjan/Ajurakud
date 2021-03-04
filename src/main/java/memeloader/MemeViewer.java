@@ -28,7 +28,7 @@ public class MemeViewer extends JFrame {
         java.util.List<String> urls = MemeService.getMemes().getUrls();
 
         if (urls != null) {
-            int loopCounter = urls.size() > 20 ? 20 : urls.size();
+            int loopCounter = Math.min(urls.size(), 2000);
             for (int i = 0; i < loopCounter; i++) {
                 new MemeViewer(urls.get(i)).setVisible(true);
             }
