@@ -17,6 +17,8 @@ public class MainIntegraator {
         var mainMethods = reflections.getMethodsMatchParams(String[].class).stream()
                 .filter(method -> (method.getModifiers() & Modifier.STATIC) == 8);
 
+        // TODO : FILTER OUT BY NAME MAIN
+
         String[] paramas = null;
         var futures = new ArrayList<CompletableFuture<Void>>();
         mainMethods.forEach(method -> futures.add(CompletableFuture.runAsync(() -> {

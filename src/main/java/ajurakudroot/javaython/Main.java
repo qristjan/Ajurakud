@@ -10,7 +10,7 @@ public class Main {
 
     private static void javascriptWindowWidget() {
         ScriptEngineManager manager = new ScriptEngineManager();
-        new WindowWidget("Javascript", "function jsFunction() {\n\n\n}", new CodeRunner("jsFunction", manager.getEngineByName("javascript")));
+        new WindowWidget("Javascript", "function jsFunction() {\n\n\n}", new CodeRunner("jsFunction", manager.getEngineByName("graal.js")));
     }
 
 }
