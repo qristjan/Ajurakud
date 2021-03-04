@@ -1,1 +1,1 @@
-Ye this is frontend for ajurakud
+Ye this is frontend for ajurakudroot.ajurakud

@@ -1,0 +1,6 @@
+{
+  "encrypted_data": "ifgjdifdsfijdifjdsoifjdsafjas",
+  "decrypted_data": "Tere, Siim",
+  "method_0": "function main() {  return 100;  };",
+  "method_1": "function fibonacci(n) {   if(n == 0)\n             return 0;\n        if(n == 1 || n == 2)\n             return 1;\n        var prev_1 = 1, prev_2 = 1, current; \n        // O(n)\n        for(var i = 3; i <= n; i++)\n        {\n            current = prev_1 + prev_2;\n            prev_1 = prev_2;\n            prev_2 = current;\n        }\n        return current;  };"
+}
