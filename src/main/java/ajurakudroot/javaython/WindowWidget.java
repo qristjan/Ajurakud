@@ -12,7 +12,7 @@ public class WindowWidget extends JPanel {
         JFrame frame = new JFrame(engine);
         frame.add(this);
         frame.setVisible(true);
-        frame.setSize(800, 600);
+        frame.setSize(1280 , 720);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -26,9 +26,11 @@ public class WindowWidget extends JPanel {
         add(new JLabel("Write code here: "), gbc);
         gbc.gridy++;
         JTextArea code = new JTextArea();
+        Font f = new Font("consolas", Font.PLAIN, 18);
+        code.setFont(f);
         Border border = BorderFactory.createLineBorder(Color.BLACK);
         code.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-        code.setPreferredSize(new Dimension(200, 200));
+        code.setPreferredSize(new Dimension(400,400));
         code.setText(defaultCode);
         add(code, gbc);
         gbc.gridx++;
@@ -36,8 +38,10 @@ public class WindowWidget extends JPanel {
         add(new JLabel("Result: "), gbc);
         gbc.gridy++;
         JTextArea result = new JTextArea();
+        result.setFont(f);
+
         result.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-        result.setPreferredSize(new Dimension(200, 200));
+        result.setPreferredSize(new Dimension(400,400));
         add(result, gbc);
         gbc.gridy++;
 
