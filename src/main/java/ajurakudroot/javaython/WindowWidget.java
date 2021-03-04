@@ -30,22 +30,34 @@ public class WindowWidget extends JPanel {
         code.setFont(f);
         Border border = BorderFactory.createLineBorder(Color.BLACK);
         code.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
-        code.setPreferredSize(new Dimension(400,400));
+        Dimension cod = new Dimension(800, 500);
+        code.setMaximumSize(cod);
+        code.setPreferredSize(cod);
+        code.setMinimumSize(cod);
+        code.setWrapStyleWord(true);
+        code.setLineWrap(true);
+
         code.setText(defaultCode);
         add(code, gbc);
-        gbc.gridx++;
-        gbc.gridy--;
+        //gbc.gridx++;
+        gbc.gridy++;
         add(new JLabel("Result: "), gbc);
         gbc.gridy++;
         JTextArea result = new JTextArea();
         result.setFont(f);
+        Dimension resultsize = new Dimension(800, 50);
+        result.setMaximumSize(resultsize);
+        result.setPreferredSize(resultsize);
+        result.setMinimumSize(resultsize);
+
 
         result.setBorder(BorderFactory.createCompoundBorder(border, BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         result.setPreferredSize(new Dimension(400,400));
         add(result, gbc);
         gbc.gridy++;
 
-        JButton actionButton = new JButton("Run");
+        JButton actionButton = new JButton("Run (ALT + R)");
+        actionButton.setMnemonic('R');
         actionButton.addActionListener(e -> {
             codeRunner.code = code.getText();
             codeRunner.result = result;
