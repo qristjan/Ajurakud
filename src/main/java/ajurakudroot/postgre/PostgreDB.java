@@ -27,9 +27,10 @@ public class PostgreDB {
 
     public String getTableData(String tableName) {
         try {
-            return new Gson().fromJson(new String(Files.readAllBytes(Path.of(path(tableName)))), JsonArray.class).toString();
+            JsonArray data = new Gson().fromJson(new String(Files.readAllBytes(Path.of(path(tableName)))), JsonArray.class);
+            return data == null ? null : data.toString();
         } catch (IOException e) {
-            return "";
+            return null;
         }
     }
 
@@ -41,6 +42,10 @@ public class PostgreDB {
         }
     }
 
+    public boolean deleteTable(String tableName) {
+        return new File(path(tableName)).delete();
+    }
+
     public void addRow(String tableName, String row) {
         try {
             JsonArray data = new Gson().fromJson(new String(Files.readAllBytes(Path.of(path(tableName)))), JsonArray.class);
@@ -48,7 +53,11 @@ public class PostgreDB {
                 data = new JsonArray();
             }
             data.add(row);
-            Files.writeString(Path.of(path(tableName)), data.getAsString());
+            String json = data.getAsString();
+            if (!(json.startsWith("[") && json.endsWith("]"))) {
+                json = "[" + json + "]";
+            }
+            Files.writeString(Path.of(path(tableName)), json);
         } catch (IOException e) {
             throw new RuntimeException("Whoopsie");
         }
