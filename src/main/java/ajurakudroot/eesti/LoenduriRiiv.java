@@ -12,11 +12,11 @@ public class LoenduriRiiv extends CountDownLatch {
         countDown();
     }
 
-    public void oota() throws NiidiHäirimiseErind {
+    public void oota() throws HäirimiseErind {
         try {
             await();
         } catch (InterruptedException e) {
-            throw new NiidiHäirimiseErind(e.getMessage());
+            throw new HäirimiseErind(e.getMessage());
         }
     }
 }

@@ -1,6 +1,6 @@
 package ajurakudroot.sorteerimisalgoritmid;
 
-import ajurakudroot.eesti.NiidiHäirimiseErind;
+import ajurakudroot.eesti.HäirimiseErind;
 import ajurakudroot.eesti.Niit;
 import ajurakudroot.eesti.NumbriNimekiri;
 import org.junit.Test;
@@ -47,8 +47,8 @@ public class UneSorteerijaTest {
 
         try {
             Niit.maga(100);
-        } catch (NiidiHäirimiseErind niidiHäirimiseErind) {
-            niidiHäirimiseErind.printStackTrace();
+        } catch (HäirimiseErind häirimiseErind) {
+            häirimiseErind.printStackTrace();
         }
         // kinnita
         List<Number> resultSorted = numbrid.stream().sorted().collect(Collectors.toList());
@@ -95,8 +95,8 @@ public class UneSorteerijaTest {
 
         try {
             Niit.maga(100);
-        } catch (NiidiHäirimiseErind niidiHäirimiseErind) {
-            niidiHäirimiseErind.trükiPinumäluJälg();
+        } catch (HäirimiseErind häirimiseErind) {
+            häirimiseErind.trükiPinumäluJälg();
         }
         // kinnita
         List<Number> resultSorted = numbrid.stream().sorted().collect(Collectors.toList());

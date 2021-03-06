@@ -1,7 +1,7 @@
 package ajurakudroot.sorteerimisalgoritmid;
 
 import ajurakudroot.eesti.LoenduriRiiv;
-import ajurakudroot.eesti.NiidiHäirimiseErind;
+import ajurakudroot.eesti.HäirimiseErind;
 import ajurakudroot.eesti.Niit;
 import ajurakudroot.eesti.NumbriNimekiri;
 
@@ -28,7 +28,7 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
                     loenduriRiiv.oota();
                     Niit.maga(number.longValue() * 60);
                     sorteeritudNimekiri.lisa(number);
-                } catch (NiidiHäirimiseErind e) {
+                } catch (HäirimiseErind e) {
                     e.trükiPinumäluJälg();
                 }
             }).start();
@@ -36,7 +36,7 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
 
         try {
             Niit.maga(kõigeSuurim(nimekiri) * 100);
-        } catch (NiidiHäirimiseErind e) {
+        } catch (HäirimiseErind e) {
             e.trükiPinumäluJälg();
         }
 

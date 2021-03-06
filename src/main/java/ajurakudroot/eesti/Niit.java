@@ -2,11 +2,11 @@ package ajurakudroot.eesti;
 
 public class Niit extends Thread{
 
-    public static void maga(long millisekundeid) throws NiidiHäirimiseErind {
+    public static void maga(long millisekundeid) throws HäirimiseErind {
         try {
             Thread.sleep(millisekundeid);
         } catch (InterruptedException e) {
-            throw new NiidiHäirimiseErind(e.getMessage());
+            throw new HäirimiseErind(e.getMessage());
         }
     }
 

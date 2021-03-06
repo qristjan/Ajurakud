@@ -1,7 +1,7 @@
 package ajurakudroot.eesti;
 
-public class NiidiHäirimiseErind extends InterruptedException{
-    public NiidiHäirimiseErind(String s) {
+public class HäirimiseErind extends InterruptedException{
+    public HäirimiseErind(String s) {
         super(s);
     }
 
