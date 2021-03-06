@@ -25,9 +25,10 @@ public class KodunePinuTest {
     public void looUusPinuJaVaataTühjaPinu() {
         var pinu = new KodunePinu<Long>();
         try {
-            pinu.vaata();
+            pinu.vaata(1000);
         } catch (RuntimeException e) {
             Assert.assertEquals("Läksid liiga kaugele", e.getMessage());
+            return;
         }
         Assert.fail("Oleks pidanud püüdma RuntimeExceptioni");
     }

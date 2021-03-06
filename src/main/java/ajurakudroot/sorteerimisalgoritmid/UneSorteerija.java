@@ -26,7 +26,7 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
 
                 try {
                     loenduriRiiv.oota();
-                    Niit.maga(number.longValue() * 60);
+                    Niit.maga(number.longValue() * 70);
                     sorteeritudNimekiri.lisa(number);
                 } catch (HäirimiseErind e) {
                     e.trükiPinumäluJälg();

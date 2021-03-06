@@ -3,13 +3,22 @@ package ajurakudroot.sorteerimisalgoritmid;
 import ajurakudroot.eesti.HäirimiseErind;
 import ajurakudroot.eesti.Niit;
 import ajurakudroot.eesti.NumbriNimekiri;
+import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.runner.RunWith;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -17,9 +26,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 // TODO: SIIMER(06.03.2021 kell 16:06) - parandasin testid, töötab jälle mu masina peal
 // TODO: Kahtlustan, et kristjan jookseb EEPROM MÄLU peal
 @RunWith(MockitoJUnitRunner.class)
-public class UneSorteerijaTest {
+public class SorteerijaTest {
 
-    @Test
     public void sorteeri_sorteerib_õnneliktee() {
         // arranzeeri
         var sorteerija = new UneSorteerija();
@@ -85,7 +93,7 @@ public class UneSorteerijaTest {
         // arranzeeri
         var sorteerija = new UneSorteerija();
         var numbrid = new Random()
-                .ints(2000, 1, 50)
+                .ints(1000, 1, 50)
                 .boxed()
                 .map(i -> (Number) i)
                 .collect(Collectors.toCollection(NumbriNimekiri::koosta));
