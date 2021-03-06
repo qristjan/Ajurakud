@@ -42,6 +42,10 @@ public class NumbriNimekiri extends ArrayList<Number> {
         return remove(number);
     }
 
+    public Number määra(int indeks, Number number){
+        return set(indeks, number);
+    }
+
     public Number saa(int indeks){
         return get(indeks);
     }

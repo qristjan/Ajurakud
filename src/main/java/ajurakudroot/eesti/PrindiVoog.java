@@ -11,6 +11,8 @@ public class PrindiVoog extends PrintStream {
         super(välja);
     }
 
+
+
     public void trükiRida(String rida){
         System.out.println(rida);
     }
