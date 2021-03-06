@@ -9,6 +9,14 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
 
     @Override
     public NumbriNimekiri sorteeri(NumbriNimekiri nimekiri) {
+        if(nimekiri == null){
+            return null;
+        }
+
+        if(nimekiri.onTühi()){
+            return NumbriNimekiri.koosta();
+        }
+
         var sorteeritudNimekiri = new NumbriNimekiri();
         var loenduriRiiv = new LoenduriRiiv(nimekiri.suurus());
 
@@ -18,7 +26,7 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
 
                 try {
                     loenduriRiiv.oota();
-                    Niit.maga(number.longValue() * 10);
+                    Niit.maga(number.longValue() * 60);
                     sorteeritudNimekiri.lisa(number);
                 } catch (NiidiHäirimiseErind e) {
                     e.trükiPinumäluJälg();
@@ -27,7 +35,7 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
         }
 
         try {
-            Niit.maga(kõigeSuurim(nimekiri) * 11);
+            Niit.maga(kõigeSuurim(nimekiri) * 100);
         } catch (NiidiHäirimiseErind e) {
             e.trükiPinumäluJälg();
         }
@@ -35,7 +43,7 @@ public class UneSorteerija implements SortimisAlgoritmiLiides{
         return sorteeritudNimekiri;
     }
 
-    public long kõigeSuurim(NumbriNimekiri nimekiri) {
+    private long kõigeSuurim(@org.jetbrains.annotations.NotNull NumbriNimekiri nimekiri) {
         long maksimaalne = 1;
         for (int i = 0; i < nimekiri.size(); i++) {
             if (nimekiri.saa(i).longValue() > maksimaalne) {

@@ -17,7 +17,7 @@ public class NumbriNimekiri extends ArrayList<Number> {
         return size();
     }
 
-    public void lisa(Number number){
+    public synchronized void lisa(Number number){
         add(number);
     }
 
@@ -27,6 +27,10 @@ public class NumbriNimekiri extends ArrayList<Number> {
 
     public Number saa(int indeks){
         return get(indeks);
+    }
+
+    public boolean onTühi(){
+        return isEmpty();
     }
 
     public Stream<Number> voog(){
