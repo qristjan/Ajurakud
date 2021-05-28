@@ -10,13 +10,13 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         // sorteerijaNäide(new BogoSorteerija());
-        sorteerijaNäide(new KüsiSorteerija());
+        sorteerijaNäide(new StaliniSorteerija());
     }
 
 
     private static void sorteerijaNäide(SortimisAlgoritmiLiides liides) {
         var numbrid = new Random()
-                .ints(3, 1, 100)
+                .ints(4, 1, 100)
                 .boxed()
                 .map(i -> (Number) i)
                 .collect(Collectors.toCollection(NumbriNimekiri::koosta));
